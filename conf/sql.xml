@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <sql id="1" name="first" desc="">
+        <![CDATA[
+            select * from user;
+        ]]>
+    </sql>
+    <sql id="2" name="first" desc="">
+        <![CDATA[
+            select * from ssss;
+        ]]>
+    </sql>
+</template>
