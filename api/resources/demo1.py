@@ -4,19 +4,19 @@
 from flask import request
 from flask_restful import Resource, reqparse
 
-todos = {}
+names = {}
 
 parser = reqparse.RequestParser()
-parser.add_argument('data', type=int)
+parser.add_argument('name', type=str)
 
 class Demo1(Resource):
-    def get(self, todo_id):
-        return {todo_id: todos[todo_id]}
+    def get(self, name):
+        return "get请求-名字是%s" % name
 
-    def post(self, todo_id):
-        # args = parser.parse_args()
-        # todos[todo_id] = request.form['data']
-        # print(args)
+    def post(self):
+        args = parser.parse_args()
+        name = request.form['name']
+        print(args)
         # todos[todo_id] = {'data': args['data']}
         # return {todo_id: todos[todo_id]}
-        return "bbb"
+        return "您的名字是%s" % name
