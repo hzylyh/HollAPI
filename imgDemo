@@ -1,0 +1,6 @@
+dirver.save_screenshot('image1')
+diff = test_cmp('image1', 'image2')
+pic1 = Image.open('image1')
+draw = ImageDraw.Draw(pic1)
+draw.rectangle(diff.getbbox(), outline='red')
+pic1.save('new.png')
